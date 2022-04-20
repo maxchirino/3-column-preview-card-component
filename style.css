@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --color-sedans: hsl(31, 77%, 52%);
+  --color-suvs: hsl(184, 100%, 22%);
+  --color-luxury: hsl(179, 100%, 13%);
+  /* Paragraphs */
+  --transp-white: hsla(0, 0%, 100%, 0.75);
+  /* Background, Headings, Buttons */
+  --light-gray: hsl(0, 0%, 95%);
+  --font-body: 'Lexend Deca', sans-serif;
+  --font-headings: 'Big Shoulders Display', cursive;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: var(--font-headings);
+  text-transform: uppercase;
+  color: var(--light-gray);
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--transp-white);
+  margin-bottom: 6rem;
+}
+
+a {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-decoration: none;
+  background-color: var(--light-gray);
+  border-radius: 2rem;
+  padding: 0.7rem 2.1rem;
+  outline: 0.185rem solid var(--light-gray);
+}
+
+h2,
+img {
+  margin-bottom: 2rem;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+}
+
+.card {
+  display: flex;
+  max-width: 60rem;
+}
+
+.sedans-section,
+.suvs-section,
+.luxury-section {
+  padding: 3rem;
+}
+
+/* SEDANS */
+.sedans-section {
+  background-color: var(--color-sedans);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.sedans-section a {
+  color: var(--color-sedans);
+}
+
+/* SUVS */
+.suvs-section {
+  background-color: var(--color-suvs);
+}
+
+.suvs-section a {
+  color: var(--color-suvs);
+}
+
+/* LUXURY */
+.luxury-section {
+  background-color: var(--color-luxury);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.luxury-section a {
+  color: var(--color-luxury);
+}
+
+/* All links */
+a:hover {
+  background-color: transparent;
+  color: var(--light-gray);
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    flex-direction: column;
+  }
+
+  h2,
+  img {
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .sedans-section {
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .luxury-section {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
